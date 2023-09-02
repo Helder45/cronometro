@@ -61,6 +61,7 @@ function resumirTempo() {
 }
 
 function resetarTempo() {
+    iniciarBtn.disabled = false;
     clearInterval(intervalo);
     hora = 0;
     minutos = 0;
@@ -70,7 +71,7 @@ function resetarTempo() {
     minutosEl.textContent = formatarTempo(segundos);
     segundosEl.textContent = formatarTempo(hora);
 
-    iniciarBtn.disabled = false;
+    
     pararBtn.disabled = false;
     resumirBtn.disabled = true;
     
