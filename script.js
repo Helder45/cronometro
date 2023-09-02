@@ -19,7 +19,10 @@ pararBtn.addEventListener("click", pararTempo);
 resumirBtn.addEventListener("click", resumirTempo);
 resetarBtn.addEventListener("click", resetarTempo);
 
+
 function iniciarContador() {
+
+    iniciarBtn.disabled = true;
 
     intervalo = setInterval(() => {
 
@@ -49,7 +52,6 @@ function iniciarContador() {
 
 function pararTempo(){
     pausado = true;
-    iniciarBtn.disabled = true;
     pararBtn.disabled = true;
     resumirBtn.disabled = false;
 }
@@ -61,19 +63,20 @@ function resumirTempo() {
 }
 
 function resetarTempo() {
+
     iniciarBtn.disabled = false;
+    pararBtn.disabled = false;
+    resumirBtn.disabled = true;
+
     clearInterval(intervalo);
     hora = 0;
     minutos = 0;
     segundos = 0;
+    pausado = false;
 
     horaEl.textContent = formatarTempo(minutos);
     minutosEl.textContent = formatarTempo(segundos);
     segundosEl.textContent = formatarTempo(hora);
-
-    
-    pararBtn.disabled = false;
-    resumirBtn.disabled = true;
     
 }
 
