@@ -1,3 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
 .altura-div{
     height: 25rem;
+}
+
+.fonte{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 50px;
+}
+
+.fonte span{
+    width: 80px;
 }
